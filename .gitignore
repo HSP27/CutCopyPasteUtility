@@ -1,0 +1,25 @@
+.idea/
+
+# Gradle related files and caches
+.gradletasknamecache
+.gradle/
+build/
+bin/
+
+# Gradle generated files
+gen/
+output/
+logs/
+*Generarted_Code/
+
+*.iml
+classes/
+*.class
+.mtj.tmp/
+*.war
+*.ear
+*.iws
+/out/
+out/
+.idea_modules/
+/.nb-gradle/
