@@ -17,11 +17,16 @@ class CutCopyOperations {
         continue;
       }
       String sourceFilePath = getSourceFilePath(source, filePath);
-      String targetFilePath = destination + File.separator + filePath;
+      String targetFilePath = getTargetFilePath(destination, filePath);
       System.out.println("Processing File : " + sourceFilePath);
       Operation op = OperationFactory.getOperation(operation);
       op.perform(Paths.get(sourceFilePath), Paths.get(targetFilePath));
     }
+  }
+
+  private static String getTargetFilePath(String destination, String filePath) {
+    File file = new File(filePath);
+    return destination + File.separator + file.getName();
   }
 
   private static List<String> getLines(String fileName) {
